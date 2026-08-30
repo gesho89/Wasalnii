@@ -1,0 +1,68 @@
+{
+  "expo": {
+    "name": "تـك توكي - Tuk Tuky",
+    "slug": "onspace-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/logo.png",
+    "scheme": "onspaceapp",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "تـك توكي - Tuk Tuky تحتاج إذن الموقع لإيجاد أقرب سائق إليك.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "تـك توكي - Tuk Tuky تحتاج إذن الموقع لتتبع رحلتك.",
+        "NSLocationAlwaysUsageDescription": "تـك توكي - Tuk Tuky تحتاج إذن الموقع لتتبع رحلتك."
+      },
+      "config": {
+        "googleMapsApiKey": ""
+      }
+    },
+    "android": {
+      "config": {
+        "googleMaps": {
+          "apiKey": ""
+        }
+      },
+      "permissions": [
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION"
+      ],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/logo.png",
+        "backgroundColor": "#0D0D0D"
+      },
+      "edgeToEdgeEnabled": true
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/logo.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "تـك توكي - Tuk Tuky تحتاج إذن الموقع لإيجاد أقرب سائق إليك.",
+          "locationWhenInUsePermission": "تـك توكي - Tuk Tuky تحتاج إذن الموقع لإيجاد أقرب سائق إليك.",
+          "locationAlwaysPermission": "تـك توكي - Tuk Tuky تحتاج إذن الموقع لتتبع رحلتك."
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/logo.png",
+          "imageWidth": 220,
+          "resizeMode": "contain",
+          "backgroundColor": "#0D0D0D"
+        }
+      ],
+      "expo-web-browser"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
